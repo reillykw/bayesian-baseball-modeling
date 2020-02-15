@@ -1,0 +1,90 @@
+
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%
+% Page Layout
+%%%%%%%%%%%%%%%%%%%
+
+\setlength{\paperwidth}{8.5in} \setlength{\paperheight}{11in}
+\setlength{\marginparwidth}{0in} \setlength{\marginparsep}{0in}
+\setlength{\oddsidemargin}{0in} \setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in} \setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Include Packages and Style Files
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumerate}
+%\usepackage[pdftex]{graphicx,color}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define theorem environments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem*{remark}{Remark}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Define new commands
+%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\mb}[1]{\mathbf{#1}}
+
+\begin{document}
+
+\title{Hierarchical Bayesian Modeling for Home Run Totals in the MLB}
+\author{Josh Tracy}
+\date{}
+
+
+
+\maketitle
+
+
+\section{Introduction}
+
+
+
+\section{Data}
+
+\subsection{Source of Data}
+
+\subsection{Cleaning}
+
+
+\section{Model}
+
+
+\section{Markov Chain Monte Carlo}
+
+Markov chains are discrete sequences of numbers such that $p(x_n | x_{n-1}, x_{n-2}, ...x_2, x_1) = p(x_n | x_{n-1})$. Markov chains are named such because they exhibit the Markov property. Derived by Russian mathematician Andrey Markov, the Markov property refers to the memorylessness of a stochastic procces. That is, the probability of state $x_n$ is dependent on only the previous state $x_{n-1}$. You only need to know the current state to predict the subsequent state. Knowing the past history of states won't provide additional information regarding any future state. 
+
+\subsection{Metropolis-Hastings Algorithm}
+
+
+\section{Results}
+
+\section{Conclusions}
+
+\subsection{Future Modifications}
+
+
+\section*{Bibliography}
+
+
+
+\end{document}
