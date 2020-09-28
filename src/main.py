@@ -4,8 +4,14 @@ import scipy.stats as stats
 import boto3
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 SAMPLES = 100
-BUCKET = 'bayesian-baseball'
+BUCKET = os.getenv('BUCKET')
+REGION_NAME = os.getenv('REGION_NAME')
+AWS_PROFILE = os.getenv('AWS_PROFILE')
 
 PARAMS = {
     'tau': 10,
@@ -14,8 +20,6 @@ PARAMS = {
     'beta_mean': 0,
     'gamma_mean': 0
 }
-
-REGION_NAME = 'us-west-2'
 
 if __name__ == '__main__':
 
@@ -27,7 +31,7 @@ if __name__ == '__main__':
 
     gibbs = utils.run_gibbs(samples=SAMPLES, data=test, params=PARAMS)
     # ------ When running locally use profile_name='homeusr'
-    session = boto3.session.Session(region_name=REGION_NAME, profile_name='homeusr')
+    session = boto3.session.Session(region_name=REGION_NAME, profile_name=AWS_PROFILE)
     utils.write_gibbs_s3(gibbs, session, bucket=BUCKET)
 
 
