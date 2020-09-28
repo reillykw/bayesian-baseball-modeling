@@ -20,7 +20,11 @@ def logit_theta(theta):
 
 def age_trajectory(age, gamma):
     """ Put docstring here """
-    return gamma[0] + age * gamma[1] + (age ** 2) * gamma[2] + (age ** 3) * gamma[3]
+    # return gamma[0] + age * gamma[1] + (age ** 2) * gamma[2] + (age ** 3) * gamma[3]
+    if age < 30:
+        return gamma[0] + age * gamma[1]
+    else:
+        return gamma[2] + age * gamma[3]
 
 
 def log_prior(alpha, beta, gamma, nu, omega, tau):
@@ -238,36 +242,52 @@ def back_sampling(P, M, player):
     return np.array(list(reversed(samples)))
 
 
-def gibbs_sampler(samples, data, params):
+def initialize_params(data, params):
 
     tau = params['tau']
-    prop_var = params['proposal_var']
     alpha_mean = params['alpha_mean']
     beta_mean = params['beta_mean']
     gamma_mean = params['gamma_mean']
 
-    # Proposal distribution for movements
-    proposal_distribution = stats.norm(loc=0, scale=prop_var)
-
-    # alpha = stats.multivariate_normal.rvs(mean=0, cov=tau, size=(9, 2))
     alpha = stats.multivariate_normal.rvs(mean=alpha_mean, cov=tau, size=(9, 2))
     # alpha params must be sorted such that alpha[0] < alpha[1]
     alpha.sort()
-
     beta = stats.norm.rvs(loc=beta_mean, scale=tau, size=len(data.park.unique()))
     gamma = stats.norm.rvs(loc=gamma_mean, scale=tau, size=36).reshape(9, 4)
-
     nu = stats.dirichlet.rvs(alpha=np.array([1, 1]), size=18).reshape(9, 2, 2)
     omega = np.ones((9, 2, 2))
     elite = data.eliteStatus.values
 
-    parks = sorted(data.park.unique())
+    return alpha, beta, gamma, nu, omega, elite
+
+
+def gibbs_sampler(samples, data, params):
+
+    tau = params['tau']
+    prop_var = params['proposal_var']
+
+    # Proposal distribution for movements
+    proposal_distribution = stats.norm(loc=0, scale=prop_var)
+
+    ## alpha = stats.multivariate_normal.rvs(mean=0, cov=tau, size=(9, 2))
+    # alpha = stats.multivariate_normal.rvs(mean=alpha_mean, cov=tau, size=(9, 2))
+    # # alpha params must be sorted such that alpha[0] < alpha[1]
+    # alpha.sort()
+    #
+    # beta = stats.norm.rvs(loc=beta_mean, scale=tau, size=len(data.park.unique()))
+    # gamma = stats.norm.rvs(loc=gamma_mean, scale=tau, size=36).reshape(9, 4)
+    #
+    # nu = stats.dirichlet.rvs(alpha=np.array([1, 1]), size=18).reshape(9, 2, 2)
+    # omega = np.ones((9, 2, 2))
+    # elite = data.eliteStatus.values
+
+    alpha, beta, gamma, nu, omega, elite = initialize_params(data, params)
 
     alpha_samples = [alpha]
     beta_samples = [beta]
     gamma_samples = [gamma]
     nu_samples = [nu]
-    elite_samples = [elite]
+    # elite_samples = [elite]
 
     alpha_accept = 0
     beta_accept = 0
@@ -275,44 +295,97 @@ def gibbs_sampler(samples, data, params):
 
     for n in range(samples):
         # alpha update
-        alpha_prop = alpha + proposal_distribution.rvs(size=(9, 2))
-        alpha_prop.sort()
-        rho_a = log_posterior(alpha_prop, beta, gamma, nu, omega, tau, data) - \
-            log_posterior(alpha, beta, gamma, nu, omega, tau, data)
-        if np.isnan(rho_a):
-            rho_a = 0
-        rho_a = min(0, rho_a)
-        accept = np.random.rand()
-        if rho_a > np.log(accept):
-            alpha_accept += 1
-            alpha = alpha_prop
+        for i, alpha_ in enumerate(alpha):
+            # propose new position alpha
+            alpha_c = alpha.copy()
+            prop_a = alpha_ + proposal_distribution.rvs(size=2)
+            prop_a.sort()
+            # insert new
+            alpha_c[i, :] = prop_a
+            rho_a = log_posterior(alpha_c, beta, gamma, nu, omega, tau, data) - \
+                log_posterior(alpha, beta, gamma, nu, omega, tau, data)
+            if np.isnan(rho_a):
+                rho_a = 0
+            rho_a = min(0, rho_a)
+            accept = np.random.rand()
+            if rho_a > np.log(accept):
+                alpha_accept += 1
+                alpha = alpha_c
+
         alpha_samples.append(alpha)
 
-        # beta update
-        beta_prop = beta + proposal_distribution.rvs(size=len(parks))
-        rho_b = log_posterior(alpha, beta_prop, gamma, nu, omega, tau, data) - \
-            log_posterior(alpha, beta, gamma, nu, omega, tau, data)
-        if np.isnan(rho_b):
-            rho_b = 0
-        rho_b = min(0, rho_b)
-        accept = np.random.rand()
-        if rho_b > np.log(accept):
-            beta_accept += 1
-            beta = beta_prop
+
+        # alpha_prop = alpha + proposal_distribution.rvs(size=(9, 2))
+        # alpha_prop.sort()
+        # rho_a = log_posterior(alpha_prop, beta, gamma, nu, omega, tau, data) - \
+        #     log_posterior(alpha, beta, gamma, nu, omega, tau, data)
+        # if np.isnan(rho_a):
+        #     rho_a = 0
+        # rho_a = min(0, rho_a)
+        # accept = np.random.rand()
+        # if rho_a > np.log(accept):
+        #     alpha_accept += 1
+        #     alpha = alpha_prop
+        # alpha_samples.append(alpha)
+
+        for i, beta_ in enumerate(beta):
+            beta_c = beta.copy()
+            prop_b = beta_ + proposal_distribution.rvs()
+            beta_c[i] = prop_b
+            rho_b = log_posterior(alpha, beta_c, gamma, nu, omega, tau, data) - \
+                log_posterior(alpha, beta, gamma, nu, omega, tau, data)
+            if np.isnan(rho_b):
+                rho_b = 0
+            rho_b = min(0, rho_b)
+            accept = np.random.rand()
+            if rho_b > np.log(accept):
+                beta_accept += 1
+                beta = beta_c
+
         beta_samples.append(beta)
 
-        # gamma update
-        gamma_prop = gamma + proposal_distribution.rvs(size=36).reshape(9, 4)
-        rho_g = log_posterior(alpha, beta, gamma_prop, nu, omega, tau, data) - \
-            log_posterior(alpha, beta, gamma, nu, omega, tau, data)
-        if np.isnan(rho_g):
-            rho_g = 0
-        rho_g = min(0, rho_g)
-        accept = np.random.rand()
-        if rho_g > np.log(accept):
-            gamma_accept += 1
-            gamma = gamma_prop
+
+        # beta update
+        # beta_prop = beta + proposal_distribution.rvs(size=len(parks))
+        # rho_b = log_posterior(alpha, beta_prop, gamma, nu, omega, tau, data) - \
+        #     log_posterior(alpha, beta, gamma, nu, omega, tau, data)
+        # if np.isnan(rho_b):
+        #     rho_b = 0
+        # rho_b = min(0, rho_b)
+        # accept = np.random.rand()
+        # if rho_b > np.log(accept):
+        #     beta_accept += 1
+        #     beta = beta_prop
+        # beta_samples.append(beta)
+
+        for i, gamma_ in enumerate(gamma):
+            gamma_c = gamma.copy()
+            prop_g = gamma_ + proposal_distribution.rvs(size=4)
+            gamma_c[i, :] = prop_g
+            rho_g = log_posterior(alpha, beta, gamma_c, nu, omega, tau, data) - \
+                log_posterior(alpha, beta, gamma, nu, omega, tau, data)
+            if np.isnan(rho_g):
+                rho_g = 0
+            rho_g = min(0, rho_g)
+            accept = np.random.rand()
+            if rho_g > np.log(accept):
+                gamma_accept += 1
+                gamma = gamma_c
+
         gamma_samples.append(gamma)
+
+        # gamma update
+        # gamma_prop = gamma + proposal_distribution.rvs(size=36).reshape(9, 4)
+        # rho_g = log_posterior(alpha, beta, gamma_prop, nu, omega, tau, data) - \
+        #     log_posterior(alpha, beta, gamma, nu, omega, tau, data)
+        # if np.isnan(rho_g):
+        #     rho_g = 0
+        # rho_g = min(0, rho_g)
+        # accept = np.random.rand()
+        # if rho_g > np.log(accept):
+        #     gamma_accept += 1
+        #     gamma = gamma_prop
+        # gamma_samples.append(gamma)
 
         # omega update
         omega = np.array([update_omegas(data=data, position=i, curr_params=omega) for i in range(9)])
@@ -347,7 +420,7 @@ def run_gibbs(data, samples, params):
         hours_ = seconds // 3600
         minutes_ = (seconds % 3600) // 60
         seconds_ = (seconds % 3600) % 60
-        return str(hours_) + ':' + str(minutes_) + ':' + str(seconds_)
+        return str(round(hours_)) + ':' + str(round(minutes_)) + ':' + str(round(seconds_))
 
     print(f'Gibbs sampler took {get_hms(end - start)}')
     return gibbs
@@ -365,7 +438,7 @@ def write_gibbs_s3(gibbs_data, session, bucket):
         pickle_obj = pickle.dumps(gibbs_data[i])
         s3.Object(bucket, date_time_str + '/' + file).put(Body=pickle_obj)
 
-    print(f'Efficiency for alpha sampling {gibbs_data[0][1] / len(gibbs_data[0][0])}')
-    print(f'Efficiency for beta sampling {gibbs_data[1][1] / len(gibbs_data[1][0])}')
-    print(f'Efficiency for gamma sampling {gibbs_data[2][1] / len(gibbs_data[2][0])}')
+    print(f'Efficiency for alpha sampling {gibbs_data[0][1] / (len(gibbs_data[0][0]) * 9)}')
+    print(f'Efficiency for beta sampling {gibbs_data[1][1] / (len(gibbs_data[1][0]) * 63)}')
+    print(f'Efficiency for gamma sampling {gibbs_data[2][1] / (len(gibbs_data[2][0]) * 9)}')
     print('Sending pickled data to s3...')

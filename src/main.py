@@ -4,14 +4,14 @@ import scipy.stats as stats
 import boto3
 import os
 
-SAMPLES = 10
+SAMPLES = 100
 BUCKET = 'bayesian-baseball'
 
 PARAMS = {
-    'tau': 1,
-    'proposal_var': 1,
-    'alpha_mean': -1,
-    'beta_mean': -1,
+    'tau': 10,
+    'proposal_var': 5,
+    'alpha_mean': 0,
+    'beta_mean': 0,
     'gamma_mean': 0
 }
 
@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     gibbs = utils.run_gibbs(samples=SAMPLES, data=test, params=PARAMS)
     # ------ When running locally use profile_name='homeusr'
-    # session = boto3.session.Session(region_name=REGION_NAME, profile_name='homeusr')
-    # utils.write_gibbs_s3(gibbs, session, bucket=BUCKET)
+    session = boto3.session.Session(region_name=REGION_NAME, profile_name='homeusr')
+    utils.write_gibbs_s3(gibbs, session, bucket=BUCKET)
 
 
