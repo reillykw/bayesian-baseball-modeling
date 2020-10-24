@@ -1,0 +1,223 @@
+playerID,yearID,HR,AB,playerAge,park_clean,pos_main,yearsInMLB,full_name
+avilaal01,2009,5,61,22,Comerica Park,C,1,Alex Avila
+avilaal01,2010,7,294,23,Comerica Park,C,2,Alex Avila
+avilaal01,2011,19,464,24,Comerica Park,C,3,Alex Avila
+avilaal01,2012,9,367,25,Comerica Park,C,4,Alex Avila
+avilaal01,2013,11,330,26,Comerica Park,C,5,Alex Avila
+avilaal01,2014,11,390,27,Comerica Park,C,6,Alex Avila
+avilaal01,2015,4,178,28,Comerica Park,C,7,Alex Avila
+avilaal01,2016,7,169,29,U.S. Cellular Field,C,8,Alex Avila
+avilaal01,2017,14,311,30,Comerica Park,C,9,Alex Avila
+avilaal01,2018,7,194,31,Chase Field,C,10,Alex Avila
+barneda01,2010,0,79,25,Wrigley Field,SS,1,Darwin Barney
+barneda01,2011,2,529,26,Wrigley Field,2B,2,Darwin Barney
+barneda01,2012,7,548,27,Wrigley Field,2B,3,Darwin Barney
+barneda01,2013,7,501,28,Wrigley Field,2B,4,Darwin Barney
+barneda01,2014,3,237,29,Wrigley Field,2B,5,Darwin Barney
+barneda01,2015,2,27,30,Rogers Centre,2B,6,Darwin Barney
+barneda01,2016,4,279,31,Rogers Centre,2B,7,Darwin Barney
+barneda01,2017,6,336,32,Rogers Centre,2B,8,Darwin Barney
+carpema01,2011,0,15,26,Busch Stadium III,3B,1,Matt Carpenter
+carpema01,2012,6,296,27,Busch Stadium III,1B,2,Matt Carpenter
+carpema01,2013,11,626,28,Busch Stadium III,2B,3,Matt Carpenter
+carpema01,2014,8,595,29,Busch Stadium III,3B,4,Matt Carpenter
+carpema01,2015,28,574,30,Busch Stadium III,3B,5,Matt Carpenter
+carpema01,2016,21,473,31,Busch Stadium III,3B,6,Matt Carpenter
+carpema01,2017,23,497,32,Busch Stadium III,1B,7,Matt Carpenter
+carpema01,2018,36,564,33,Busch Stadium III,1B,8,Matt Carpenter
+castiwe01,2010,1,20,23,Wrigley Field,C,1,Welington Castillo
+castiwe01,2011,0,13,24,Wrigley Field,C,2,Welington Castillo
+castiwe01,2012,5,170,25,Wrigley Field,C,3,Welington Castillo
+castiwe01,2013,8,380,26,Wrigley Field,C,4,Welington Castillo
+castiwe01,2014,13,380,27,Wrigley Field,C,5,Welington Castillo
+castiwe01,2015,19,342,28,Chase Field,C,6,Welington Castillo
+castiwe01,2016,14,416,29,Chase Field,C,7,Welington Castillo
+castiwe01,2017,20,341,30,Oriole Park at Camden Yards,C,8,Welington Castillo
+castiwe01,2018,6,170,31,U.S. Cellular Field,C,9,Welington Castillo
+cintral01,2001,0,7,23,Bank One Ballpark,SS,1,Alex Cintron
+cintral01,2002,0,75,24,Bank One Ballpark,2B,2,Alex Cintron
+cintral01,2003,13,448,25,Bank One Ballpark,SS,3,Alex Cintron
+cintral01,2004,4,564,26,Bank One Ballpark,SS,4,Alex Cintron
+cintral01,2005,8,330,27,Bank One Ballpark,SS,5,Alex Cintron
+cintral01,2006,5,288,28,U.S. Cellular Field,SS,6,Alex Cintron
+cintral01,2007,2,185,29,U.S. Cellular Field,3B,7,Alex Cintron
+cintral01,2008,1,133,30,Oriole Park at Camden Yards,SS,8,Alex Cintron
+cintral01,2009,0,26,31,Nationals Park,2B,9,Alex Cintron
+cruzne02,2005,0,5,25,Miller Park,RF,1,Nelson Cruz
+cruzne02,2006,6,130,26,Ameriquest Field,RF,2,Nelson Cruz
+cruzne02,2007,9,307,27,Rangers Ballpark in Arlington,RF,3,Nelson Cruz
+cruzne02,2008,7,115,28,Rangers Ballpark in Arlington,RF,4,Nelson Cruz
+cruzne02,2009,33,462,29,Rangers Ballpark in Arlington,RF,5,Nelson Cruz
+cruzne02,2010,22,399,30,Rangers Ballpark in Arlington,RF,6,Nelson Cruz
+cruzne02,2011,29,475,31,Rangers Ballpark in Arlington,RF,7,Nelson Cruz
+cruzne02,2012,24,585,32,Rangers Ballpark in Arlington,RF,8,Nelson Cruz
+cruzne02,2013,27,413,33,Rangers Ballpark in Arlington,RF,9,Nelson Cruz
+cruzne02,2014,40,613,34,Oriole Park at Camden Yards,DH,10,Nelson Cruz
+cruzne02,2015,44,590,35,Safeco Field,RF,11,Nelson Cruz
+cruzne02,2016,43,589,36,Safeco Field,DH,12,Nelson Cruz
+cruzne02,2017,39,556,37,Safeco Field,DH,13,Nelson Cruz
+cruzne02,2018,37,519,38,Safeco Field,DH,14,Nelson Cruz
+davisra01,2006,0,14,26,PNC Park,RF,1,Rajai Davis
+davisra01,2007,1,190,27,AT&T Park,CF,2,Rajai Davis
+davisra01,2008,3,214,28,McAfee Coliseum,CF,3,Rajai Davis
+davisra01,2009,3,390,29,Oakland-Alameda County Coliseum,CF,4,Rajai Davis
+davisra01,2010,5,525,30,Oakland-Alameda County Coliseum,CF,5,Rajai Davis
+davisra01,2011,1,320,31,Rogers Centre,CF,6,Rajai Davis
+davisra01,2012,8,447,32,Rogers Centre,LF,7,Rajai Davis
+davisra01,2013,6,331,33,Rogers Centre,LF,8,Rajai Davis
+davisra01,2014,8,461,34,Comerica Park,LF,9,Rajai Davis
+davisra01,2015,8,341,35,Comerica Park,CF,10,Rajai Davis
+davisra01,2016,12,454,36,Progressive Field,CF,11,Rajai Davis
+davisra01,2017,5,336,37,O.co Coliseum,CF,12,Rajai Davis
+davisra01,2018,1,196,38,Progressive Field,CF,13,Rajai Davis
+hamiljo03,2007,19,298,26,Great American Ball Park,CF,1,Josh Hamilton
+hamiljo03,2008,32,624,27,Rangers Ballpark in Arlington,CF,2,Josh Hamilton
+hamiljo03,2009,10,336,28,Rangers Ballpark in Arlington,CF,3,Josh Hamilton
+hamiljo03,2010,32,518,29,Rangers Ballpark in Arlington,LF,4,Josh Hamilton
+hamiljo03,2011,25,487,30,Rangers Ballpark in Arlington,LF,5,Josh Hamilton
+hamiljo03,2012,43,562,31,Rangers Ballpark in Arlington,CF,6,Josh Hamilton
+hamiljo03,2013,21,576,32,Angel Stadium of Anaheim,RF,7,Josh Hamilton
+hamiljo03,2014,10,338,33,Angel Stadium of Anaheim,LF,8,Josh Hamilton
+hamiljo03,2015,8,170,34,Rangers Ballpark in Arlington,LF,9,Josh Hamilton
+machama01,2012,7,191,20,Oriole Park at Camden Yards,3B,1,Manny Machado
+machama01,2013,14,667,21,Oriole Park at Camden Yards,3B,2,Manny Machado
+machama01,2014,12,327,22,Oriole Park at Camden Yards,3B,3,Manny Machado
+machama01,2015,35,633,23,Oriole Park at Camden Yards,3B,4,Manny Machado
+machama01,2016,37,640,24,Oriole Park at Camden Yards,3B,5,Manny Machado
+machama01,2017,33,630,25,Oriole Park at Camden Yards,3B,6,Manny Machado
+machama01,2018,37,632,26,Oriole Park at Camden Yards,SS,7,Manny Machado
+mesorde01,2011,2,50,23,Great American Ball Park,C,1,Devin Mesoraco
+mesorde01,2012,5,165,24,Great American Ball Park,C,2,Devin Mesoraco
+mesorde01,2013,9,323,25,Great American Ball Park,C,3,Devin Mesoraco
+mesorde01,2014,25,384,26,Great American Ball Park,C,4,Devin Mesoraco
+mesorde01,2015,0,45,27,Great American Ball Park,C,5,Devin Mesoraco
+mesorde01,2016,0,50,28,Great American Ball Park,C,6,Devin Mesoraco
+mesorde01,2017,6,141,29,Great American Ball Park,C,7,Devin Mesoraco
+mesorde01,2018,11,244,30,Citi Field,C,8,Devin Mesoraco
+milesaa01,2003,0,12,27,U.S. Cellular Field,2B,1,Aaron Miles
+milesaa01,2004,6,522,28,Coors Field,2B,2,Aaron Miles
+milesaa01,2005,2,324,29,Coors Field,2B,3,Aaron Miles
+milesaa01,2006,2,426,30,Busch Stadium III,2B,4,Aaron Miles
+milesaa01,2007,2,414,31,Busch Stadium III,2B,5,Aaron Miles
+milesaa01,2008,4,379,32,Busch Stadium III,2B,6,Aaron Miles
+milesaa01,2009,0,157,33,Wrigley Field,2B,7,Aaron Miles
+milesaa01,2010,0,139,34,Busch Stadium III,2B,8,Aaron Miles
+milesaa01,2011,3,454,35,Dodger Stadium,2B,9,Aaron Miles
+mossbr01,2007,0,25,24,Fenway Park II,LF,1,Brandon Moss
+mossbr01,2008,8,236,25,PNC Park,LF,2,Brandon Moss
+mossbr01,2009,7,385,26,PNC Park,RF,3,Brandon Moss
+mossbr01,2010,0,26,27,PNC Park,RF,4,Brandon Moss
+mossbr01,2011,0,6,28,Citizens Bank Park,RF,5,Brandon Moss
+mossbr01,2012,21,265,29,O.co Coliseum,1B,6,Brandon Moss
+mossbr01,2013,30,446,30,O.co Coliseum,1B,7,Brandon Moss
+mossbr01,2014,25,500,31,O.co Coliseum,1B,8,Brandon Moss
+mossbr01,2015,19,469,32,Progressive Field,1B,9,Brandon Moss
+mossbr01,2016,28,413,33,Busch Stadium III,1B,10,Brandon Moss
+mossbr01,2017,22,362,34,Kauffman Stadium,DH,11,Brandon Moss
+quentca01,2006,9,166,24,Chase Field,RF,1,Carlos Quentin
+quentca01,2007,5,229,25,Chase Field,RF,2,Carlos Quentin
+quentca01,2008,36,480,26,U.S. Cellular Field,LF,3,Carlos Quentin
+quentca01,2009,21,351,27,U.S. Cellular Field,LF,4,Carlos Quentin
+quentca01,2010,26,453,28,U.S. Cellular Field,RF,5,Carlos Quentin
+quentca01,2011,24,421,29,U.S. Cellular Field,RF,6,Carlos Quentin
+quentca01,2012,16,284,30,Petco Park,LF,7,Carlos Quentin
+quentca01,2013,13,276,31,Petco Park,LF,8,Carlos Quentin
+quentca01,2014,4,130,32,Petco Park,LF,9,Carlos Quentin
+rasmuco01,2009,16,474,23,Busch Stadium III,CF,1,Colby Rasmus
+rasmuco01,2010,23,464,24,Busch Stadium III,CF,2,Colby Rasmus
+rasmuco01,2011,14,471,25,Busch Stadium III,CF,3,Colby Rasmus
+rasmuco01,2012,23,565,26,Rogers Centre,CF,4,Colby Rasmus
+rasmuco01,2013,22,417,27,Rogers Centre,CF,5,Colby Rasmus
+rasmuco01,2014,18,346,28,Rogers Centre,CF,6,Colby Rasmus
+rasmuco01,2015,25,432,29,Minute Maid Park,LF,7,Colby Rasmus
+rasmuco01,2016,15,369,30,Minute Maid Park,LF,8,Colby Rasmus
+rasmuco01,2017,9,121,31,Tropicana Field,LF,9,Colby Rasmus
+rasmuco01,2018,1,45,32,Oriole Park at Camden Yards,RF,10,Colby Rasmus
+sanchfr01,2002,0,16,25,Fenway Park II,2B,1,Freddy Sanchez
+sanchfr01,2003,0,34,26,Fenway Park II,3B,2,Freddy Sanchez
+sanchfr01,2004,0,19,27,PNC Park,SS,3,Freddy Sanchez
+sanchfr01,2005,5,453,28,PNC Park,3B,4,Freddy Sanchez
+sanchfr01,2006,6,582,29,PNC Park,3B,5,Freddy Sanchez
+sanchfr01,2007,11,602,30,PNC Park,2B,6,Freddy Sanchez
+sanchfr01,2008,9,569,31,PNC Park,2B,7,Freddy Sanchez
+sanchfr01,2009,7,457,32,PNC Park,2B,8,Freddy Sanchez
+sanchfr01,2010,7,431,33,AT&T Park,2B,9,Freddy Sanchez
+sanchfr01,2011,3,239,34,AT&T Park,2B,10,Freddy Sanchez
+schumsk01,2005,0,24,25,Busch Stadium II,LF,1,Skip Schumaker
+schumsk01,2006,1,54,26,Busch Stadium III,LF,2,Skip Schumaker
+schumsk01,2007,2,177,27,Busch Stadium III,RF,3,Skip Schumaker
+schumsk01,2008,8,540,28,Busch Stadium III,CF,4,Skip Schumaker
+schumsk01,2009,4,532,29,Busch Stadium III,2B,5,Skip Schumaker
+schumsk01,2010,5,476,30,Busch Stadium III,2B,6,Skip Schumaker
+schumsk01,2011,2,367,31,Busch Stadium III,2B,7,Skip Schumaker
+schumsk01,2012,1,272,32,Busch Stadium III,2B,8,Skip Schumaker
+schumsk01,2013,2,319,33,Dodger Stadium,2B,9,Skip Schumaker
+schumsk01,2014,2,247,34,Great American Ball Park,LF,10,Skip Schumaker
+schumsk01,2015,1,244,35,Great American Ball Park,LF,11,Skip Schumaker
+swishni01,2004,2,60,24,Network Associates Coliseum,LF,1,Nick Swisher
+swishni01,2005,21,462,25,McAfee Coliseum,RF,2,Nick Swisher
+swishni01,2006,35,556,26,McAfee Coliseum,1B,3,Nick Swisher
+swishni01,2007,22,539,27,McAfee Coliseum,CF,4,Nick Swisher
+swishni01,2008,24,497,28,U.S. Cellular Field,1B,5,Nick Swisher
+swishni01,2009,29,498,29,Yankee Stadium III,RF,6,Nick Swisher
+swishni01,2010,29,566,30,Yankee Stadium III,RF,7,Nick Swisher
+swishni01,2011,23,526,31,Yankee Stadium III,RF,8,Nick Swisher
+swishni01,2012,24,537,32,Yankee Stadium III,RF,9,Nick Swisher
+swishni01,2013,22,549,33,Progressive Field,1B,10,Nick Swisher
+swishni01,2014,8,360,34,Progressive Field,1B,11,Nick Swisher
+swishni01,2015,6,219,35,Turner Field,DH,12,Nick Swisher
+tholejo01,2009,0,53,23,Citi Field,C,1,Josh Thole
+tholejo01,2010,3,202,24,Citi Field,C,2,Josh Thole
+tholejo01,2011,3,340,25,Citi Field,C,3,Josh Thole
+tholejo01,2012,1,321,26,Citi Field,C,4,Josh Thole
+tholejo01,2013,1,120,27,Rogers Centre,C,5,Josh Thole
+tholejo01,2014,0,133,28,Rogers Centre,C,6,Josh Thole
+tholejo01,2015,0,49,29,Rogers Centre,C,7,Josh Thole
+tholejo01,2016,1,118,30,Rogers Centre,C,8,Josh Thole
+treanma01,2004,0,55,28,Pro Player Stadium,C,1,Matt Treanor
+treanma01,2005,0,134,29,Dolphin Stadium,C,2,Matt Treanor
+treanma01,2006,2,157,30,Dolphin Stadium,C,3,Matt Treanor
+treanma01,2007,4,171,31,Dolphin Stadium,C,4,Matt Treanor
+treanma01,2008,2,206,32,Dolphin Stadium,C,5,Matt Treanor
+treanma01,2009,0,13,33,Comerica Park,C,6,Matt Treanor
+treanma01,2010,5,237,34,Rangers Ballpark in Arlington,C,7,Matt Treanor
+treanma01,2011,3,196,35,Kauffman Stadium,C,8,Matt Treanor
+treanma01,2012,2,103,36,Dodger Stadium,C,9,Matt Treanor
+troutmi01,2011,5,123,20,Angel Stadium,CF,1,Mike Trout
+troutmi01,2012,30,559,21,Angel Stadium of Anaheim,CF,2,Mike Trout
+troutmi01,2013,27,589,22,Angel Stadium of Anaheim,CF,3,Mike Trout
+troutmi01,2014,36,602,23,Angel Stadium of Anaheim,CF,4,Mike Trout
+troutmi01,2015,41,575,24,Angel Stadium of Anaheim,CF,5,Mike Trout
+troutmi01,2016,29,549,25,Angel Stadium of Anaheim,CF,6,Mike Trout
+troutmi01,2017,33,402,26,Angel Stadium of Anaheim,CF,7,Mike Trout
+troutmi01,2018,39,471,27,Angel Stadium of Anaheim,CF,8,Mike Trout
+tynerja01,2000,0,124,23,Tropicana Field,LF,1,Jason Tyner
+tynerja01,2001,0,396,24,Tropicana Field,LF,2,Jason Tyner
+tynerja01,2002,0,168,25,Tropicana Field,LF,3,Jason Tyner
+tynerja01,2003,0,90,26,Tropicana Field,RF,4,Jason Tyner
+tynerja01,2005,0,56,28,Hubert H Humphrey Metrodome,LF,5,Jason Tyner
+tynerja01,2006,0,218,29,Hubert H Humphrey Metrodome,LF,6,Jason Tyner
+tynerja01,2007,1,304,30,Hubert H Humphrey Metrodome,LF,7,Jason Tyner
+tynerja01,2008,0,2,31,Jacobs Field,LF,8,Jason Tyner
+uribeju01,2001,8,273,22,Coors Field,SS,1,Juan Uribe
+uribeju01,2002,6,566,23,Coors Field,SS,2,Juan Uribe
+uribeju01,2003,10,316,24,Coors Field,SS,3,Juan Uribe
+uribeju01,2004,23,502,25,U.S. Cellular Field,2B,4,Juan Uribe
+uribeju01,2005,16,481,26,U.S. Cellular Field,SS,5,Juan Uribe
+uribeju01,2006,21,463,27,U.S. Cellular Field,SS,6,Juan Uribe
+uribeju01,2007,20,513,28,U.S. Cellular Field,SS,7,Juan Uribe
+uribeju01,2008,7,324,29,U.S. Cellular Field,3B,8,Juan Uribe
+uribeju01,2009,16,398,30,AT&T Park,3B,9,Juan Uribe
+uribeju01,2010,24,521,31,AT&T Park,SS,10,Juan Uribe
+uribeju01,2011,4,270,32,Dodger Stadium,3B,11,Juan Uribe
+uribeju01,2012,2,162,33,Dodger Stadium,3B,12,Juan Uribe
+uribeju01,2013,12,388,34,Dodger Stadium,3B,13,Juan Uribe
+uribeju01,2014,9,386,35,Dodger Stadium,3B,14,Juan Uribe
+uribeju01,2015,14,360,36,Turner Field,3B,15,Juan Uribe
+uribeju01,2016,7,238,37,Progressive Field,3B,16,Juan Uribe
+yelicch01,2013,4,240,22,Marlins Park,LF,1,Christian Yelich
+yelicch01,2014,9,582,23,Marlins Park,LF,2,Christian Yelich
+yelicch01,2015,7,476,24,Marlins Park,LF,3,Christian Yelich
+yelicch01,2016,21,578,25,Marlins Park,LF,4,Christian Yelich
+yelicch01,2017,18,602,26,Marlins Park,CF,5,Christian Yelich
+yelicch01,2018,36,574,27,Miller Park,LF,6,Christian Yelich

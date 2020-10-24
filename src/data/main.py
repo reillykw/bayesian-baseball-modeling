@@ -12,7 +12,6 @@ if __name__ == '__main__':
     test_data = md.get_test_set(*additional_players, allow_additional_players=True)
 
     # send to processed folder
-    print('Sending processed files to processed folder')
+    print('Sending cleaned files to processed folder')
     md.send_data_to_processed(all_data)
     md.send_data_to_processed(test_data, test=True)
-

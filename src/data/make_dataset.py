@@ -1,16 +1,30 @@
 import pandas as pd
 import numpy as np
+import requests
+from zipfile import ZipFile
+from io import BytesIO
+import os
 
+URL = "https://github.com/chadwickbureau/baseballdatabank/archive/master.zip"
 DATA_FILE_PATH = '../../data/'
 POSITION_DICT = {0: 'P', 1: 'C', 2: '1B', 3: '2B', 4: '3B', 5: 'SS', 6: 'LF', 7: 'CF', 8: 'RF', 9: 'DH'}
 
 
+def get_lahman_data(url, out_path):
+    r = requests.get(url, stream=True)
+    z = ZipFile(BytesIO(r.content))
+    z.extractall(out_path)
+    print(f'Data extracted to {DATA_FILE_PATH}')
+
+
 def get_data_sets():
+    if not os.path.isdir(DATA_FILE_PATH + 'baseballdatabank-master'):
+        get_lahman_data(URL, DATA_FILE_PATH)
     files = ['People.csv', 'Batting.csv', 'Appearances.csv', 'Teams.csv']
     names = ['players', 'batting', 'appearances', 'teams']
     data_sets = []
     for file in files:
-        data_ = pd.read_csv(DATA_FILE_PATH + 'raw/' + file)
+        data_ = pd.read_csv(DATA_FILE_PATH + 'baseballdatabank-master/core/' + file)
         data_sets.append(data_)
     data_sets = dict(zip(names, data_sets))
     return data_sets
@@ -114,6 +128,7 @@ def get_player_year_data():
     data['playerFullName'] = data['nameFirst'] + ' ' + data['nameLast']
 
     # filter data to >= year 2000
+    # TODO: Get rid of this. This will skew our data especially in the early years
     data = data[data['debut'].dt.year >= 2000].sort_values(['playerID', 'yearID'])
 
     # Specify data types

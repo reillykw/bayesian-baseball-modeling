@@ -1,0 +1,133 @@
+playerID,yearID,team,AB,HR,position_main,birthYear,debut,park,playerAge,yearsInMLB,playerFullName
+2795,cardust01,2016,COL,56,2,2,1987,2016-08-26,Coors Field,29,1,Stephen Cardullo
+2817,cardust01,2017,COL,28,0,6,1987,2016-08-26,Coors Field,30,2,Stephen Cardullo
+44344,cervemi01,2008,PHI,13,0,4,1976,2008-07-11,Citizens Bank Park,32,1,Mike Cervenak
+47080,cruzne02,2005,MIL,5,0,8,1980,2005-09-17,Miller Park,25,1,Nelson Cruz
+21227,cruzne02,2006,TEX,130,6,8,1980,2005-09-17,Ameriquest Field,26,2,Nelson Cruz
+43158,cruzne02,2007,TEX,307,9,8,1980,2005-09-17,Rangers Ballpark in Arlington,27,3,Nelson Cruz
+21249,cruzne02,2008,TEX,115,7,8,1980,2005-09-17,Rangers Ballpark in Arlington,28,4,Nelson Cruz
+18738,cruzne02,2009,TEX,462,33,8,1980,2005-09-17,Rangers Ballpark in Arlington,29,5,Nelson Cruz
+18757,cruzne02,2010,TEX,399,22,8,1980,2005-09-17,Rangers Ballpark in Arlington,30,6,Nelson Cruz
+18777,cruzne02,2011,TEX,475,29,8,1980,2005-09-17,Rangers Ballpark in Arlington,31,7,Nelson Cruz
+18792,cruzne02,2012,TEX,585,24,8,1980,2005-09-17,Rangers Ballpark in Arlington,32,8,Nelson Cruz
+4842,cruzne02,2013,TEX,413,27,8,1980,2005-09-17,Rangers Ballpark in Arlington,33,9,Nelson Cruz
+41559,cruzne02,2014,BAL,613,40,9,1980,2005-09-17,Oriole Park at Camden Yards,34,10,Nelson Cruz
+2306,cruzne02,2015,SEA,590,44,8,1980,2005-09-17,Safeco Field,35,11,Nelson Cruz
+19689,cruzne02,2016,SEA,589,43,9,1980,2005-09-17,Safeco Field,36,12,Nelson Cruz
+36381,cruzne02,2017,SEA,556,39,9,1980,2005-09-17,Safeco Field,37,13,Nelson Cruz
+36401,cruzne02,2018,SEA,519,37,9,1980,2005-09-17,Safeco Field,38,14,Nelson Cruz
+5386,cruzne02,2019,MIN,454,41,9,1980,2005-09-17,Target Field,39,15,Nelson Cruz
+38220,figueco01,2014,TBA,43,0,3,1987,2014-05-16,Tropicana Field,27,1,Cole Figueroa
+38506,figueco01,2015,NYA,8,0,4,1987,2014-05-16,Yankee Stadium III,28,2,Cole Figueroa
+38003,figueco01,2016,PIT,26,0,3,1987,2014-05-16,PNC Park,29,3,Cole Figueroa
+3799,freitda01,2017,ATL,17,0,1,1989,2017-08-30,SunTrust Park,28,1,David Freitas
+36402,freitda01,2018,SEA,93,1,1,1989,2017-08-30,Safeco Field,29,2,David Freitas
+6393,freitda01,2019,MIL,15,0,1,1989,2017-08-30,Miller Park,30,3,David Freitas
+14988,fryerer01,2011,PIT,26,0,1,1985,2011-06-26,PNC Park,26,1,Eric Fryer
+15009,fryerer01,2012,PIT,4,0,6,1985,2011-06-26,PNC Park,27,2,Eric Fryer
+20656,fryerer01,2013,MIN,13,1,1,1985,2011-06-26,Target Field,28,3,Eric Fryer
+20676,fryerer01,2014,MIN,75,1,1,1985,2011-06-26,Target Field,29,4,Eric Fryer
+20696,fryerer01,2015,MIN,22,0,1,1985,2011-06-26,Target Field,30,5,Eric Fryer
+38007,fryerer01,2016,PIT,116,0,1,1985,2011-06-26,PNC Park,31,6,Eric Fryer
+26145,fryerer01,2017,SLN,71,0,1,1985,2011-06-26,Busch Stadium III,32,7,Eric Fryer
+3783,gorete01,2014,KCA,1,0,9,1991,2014-08-31,Kauffman Stadium,23,1,Terrance Gore
+51020,gorete01,2015,KCA,3,0,6,1991,2014-08-31,Kauffman Stadium,24,2,Terrance Gore
+51039,gorete01,2016,KCA,3,0,9,1991,2014-08-31,Kauffman Stadium,25,3,Terrance Gore
+44583,gorete01,2017,KCA,4,0,9,1991,2014-08-31,Kauffman Stadium,26,4,Terrance Gore
+12157,gorete01,2018,CHN,5,0,6,1991,2014-08-31,Wrigley Field,27,5,Terrance Gore
+22075,gorete01,2019,KCA,51,0,8,1991,2014-08-31,Kauffman Stadium,28,6,Terrance Gore
+16219,gregoto01,2003,ANA,19,0,1,1977,2003-09-05,Edison International Field,26,1,Tom Gregorio
+4167,hattijo01,2006,TOR,24,0,4,1980,2006-08-19,Rogers Centre,26,1,John Hattig
+1705,howarry01,2004,PHI,39,2,2,1979,2004-09-01,Citizens Bank Park,25,1,Ryan Howard
+1720,howarry01,2005,PHI,312,22,2,1979,2004-09-01,Citizens Bank Park,26,2,Ryan Howard
+1740,howarry01,2006,PHI,581,58,2,1979,2004-09-01,Citizens Bank Park,27,3,Ryan Howard
+30284,howarry01,2007,PHI,529,47,2,1979,2004-09-01,Citizens Bank Park,28,4,Ryan Howard
+44350,howarry01,2008,PHI,610,48,2,1979,2004-09-01,Citizens Bank Park,29,5,Ryan Howard
+28680,howarry01,2009,PHI,616,45,2,1979,2004-09-01,Citizens Bank Park,30,6,Ryan Howard
+44048,howarry01,2010,PHI,550,31,2,1979,2004-09-01,Citizens Bank Park,31,7,Ryan Howard
+48793,howarry01,2011,PHI,557,33,2,1979,2004-09-01,Citizens Bank Park,32,8,Ryan Howard
+48812,howarry01,2012,PHI,260,14,2,1979,2004-09-01,Citizens Bank Park,33,9,Ryan Howard
+22275,howarry01,2013,PHI,286,11,2,1979,2004-09-01,Citizens Bank Park,34,10,Ryan Howard
+14037,howarry01,2014,PHI,569,23,2,1979,2004-09-01,Citizens Bank Park,35,11,Ryan Howard
+14059,howarry01,2015,PHI,467,23,2,1979,2004-09-01,Citizens Bank Park,36,12,Ryan Howard
+8331,howarry01,2016,PHI,331,25,2,1979,2004-09-01,Citizens Bank Park,37,13,Ryan Howard
+47061,lucased01,2013,MIA,351,4,4,1982,2013-05-30,Marlins Park,31,1,Ed Lucas
+28486,lucased01,2014,MIA,179,1,3,1982,2013-05-30,Marlins Park,32,2,Ed Lucas
+18194,machama01,2012,BAL,191,7,4,1992,2012-08-09,Oriole Park at Camden Yards,20,1,Manny Machado
+41770,machama01,2013,BAL,667,14,4,1992,2012-08-09,Oriole Park at Camden Yards,21,2,Manny Machado
+41568,machama01,2014,BAL,327,12,4,1992,2012-08-09,Oriole Park at Camden Yards,22,3,Manny Machado
+14690,machama01,2015,BAL,633,35,4,1992,2012-08-09,Oriole Park at Camden Yards,23,4,Manny Machado
+14712,machama01,2016,BAL,640,37,4,1992,2012-08-09,Oriole Park at Camden Yards,24,5,Manny Machado
+15096,machama01,2017,BAL,630,33,4,1992,2012-08-09,Oriole Park at Camden Yards,25,6,Manny Machado
+15115,machama01,2018,BAL,632,37,5,1992,2012-08-09,Oriole Park at Camden Yards,26,7,Manny Machado
+9190,machama01,2019,SDN,587,32,4,1992,2012-08-09,Petco Park,27,8,Manny Machado
+17255,mathije01,2005,LAA,3,0,1,1983,2005-08-12,Angel Stadium,22,1,Jeff Mathis
+8540,mathije01,2006,LAA,55,2,1,1983,2005-08-12,Angel Stadium,23,2,Jeff Mathis
+17281,mathije01,2007,LAA,171,4,1,1983,2005-08-12,Angel Stadium,24,3,Jeff Mathis
+17301,mathije01,2008,LAA,283,9,1,1983,2005-08-12,Angel Stadium,25,4,Jeff Mathis
+1800,mathije01,2009,LAA,237,5,1,1983,2005-08-12,Angel Stadium,26,5,Jeff Mathis
+1823,mathije01,2010,LAA,205,3,1,1983,2005-08-12,Angel Stadium,27,6,Jeff Mathis
+1846,mathije01,2011,LAA,247,3,1,1983,2005-08-12,Angel Stadium,28,7,Jeff Mathis
+20963,mathije01,2012,TOR,211,8,1,1983,2005-08-12,Rogers Centre,29,8,Jeff Mathis
+47064,mathije01,2013,MIA,232,5,1,1983,2005-08-12,Marlins Park,30,9,Jeff Mathis
+28487,mathije01,2014,MIA,175,2,1,1983,2005-08-12,Marlins Park,31,10,Jeff Mathis
+28504,mathije01,2015,MIA,93,2,1,1983,2005-08-12,Marlins Park,32,11,Jeff Mathis
+18217,mathije01,2016,MIA,126,2,1,1983,2005-08-12,Marlins Park,33,12,Jeff Mathis
+6506,mathije01,2017,ARI,186,2,1,1983,2005-08-12,Chase Field,34,13,Jeff Mathis
+6527,mathije01,2018,ARI,195,1,1,1983,2005-08-12,Chase Field,35,14,Jeff Mathis
+18839,mathije01,2019,TEX,228,2,1,1983,2005-08-12,Globe Life Park in Arlington,36,15,Jeff Mathis
+25726,nakamno01,2005,LAN,39,0,4,1973,2005-04-10,Dodger Stadium,32,1,Norihiro Nakamura
+20685,polanjo01,2014,MIN,6,0,5,1993,2014-06-26,Target Field,21,1,Jorge Polanco
+20704,polanjo01,2015,MIN,10,0,5,1993,2014-06-26,Target Field,22,2,Jorge Polanco
+20726,polanjo01,2016,MIN,245,4,5,1993,2014-06-26,Target Field,23,3,Jorge Polanco
+5353,polanjo01,2017,MIN,488,13,5,1993,2014-06-26,Target Field,24,4,Jorge Polanco
+5375,polanjo01,2018,MIN,302,6,5,1993,2014-06-26,Target Field,25,5,Jorge Polanco
+5392,polanjo01,2019,MIN,631,22,5,1993,2014-06-26,Target Field,26,6,Jorge Polanco
+40832,ramoswi01,2010,WAS,79,1,1,1987,2010-05-02,Nationals Park,23,1,Wilson Ramos
+19054,ramoswi01,2011,WAS,389,15,1,1987,2010-05-02,Nationals Park,24,2,Wilson Ramos
+19076,ramoswi01,2012,WAS,83,3,1,1987,2010-05-02,Nationals Park,25,3,Wilson Ramos
+40849,ramoswi01,2013,WAS,287,16,1,1987,2010-05-02,Nationals Park,26,4,Wilson Ramos
+55205,ramoswi01,2014,WAS,341,11,1,1987,2010-05-02,Nationals Park,27,5,Wilson Ramos
+50648,ramoswi01,2015,WAS,475,15,1,1987,2010-05-02,Nationals Park,28,6,Wilson Ramos
+55175,ramoswi01,2016,WAS,482,22,1,1987,2010-05-02,Nationals Park,29,7,Wilson Ramos
+36495,ramoswi01,2017,TBA,208,11,1,1987,2010-05-02,Tropicana Field,30,8,Wilson Ramos
+2873,ramoswi01,2018,TBA,382,15,1,1987,2010-05-02,Tropicana Field,31,9,Wilson Ramos
+12957,ramoswi01,2019,NYN,473,14,1,1987,2010-05-02,Citi Field,32,10,Wilson Ramos
+14998,rodrijo05,2011,PIT,12,0,5,1984,2011-04-05,PNC Park,27,1,Josh Rodriguez
+44572,solando01,2012,MIA,285,2,3,1987,2012-05-21,Marlins Park,25,1,Donovan Solano
+47072,solando01,2013,MIA,361,3,3,1987,2012-05-21,Marlins Park,26,2,Donovan Solano
+28492,solando01,2014,MIA,310,3,3,1987,2012-05-21,Marlins Park,27,3,Donovan Solano
+28510,solando01,2015,MIA,90,0,4,1987,2012-05-21,Marlins Park,28,4,Donovan Solano
+2342,solando01,2016,NYA,22,1,3,1987,2012-05-21,Yankee Stadium III,29,5,Donovan Solano
+2854,solando01,2019,SFN,215,4,3,1987,2012-05-21,Oracle Park,32,6,Donovan Solano
+4876,telisto01,2014,TEX,68,0,1,1991,2014-08-25,Rangers Ballpark in Arlington,23,1,Tomas Telis
+28514,telisto01,2015,MIA,38,0,1,1991,2014-08-25,Marlins Park,24,2,Tomas Telis
+18226,telisto01,2016,MIA,13,1,1,1991,2014-08-25,Marlins Park,25,3,Tomas Telis
+16817,telisto01,2017,MIA,104,0,2,1991,2014-08-25,Marlins Park,26,4,Tomas Telis
+16840,telisto01,2018,MIA,29,0,1,1991,2014-08-25,Marlins Park,27,5,Tomas Telis
+1960,thomptr01,2015,CHA,122,5,8,1991,2015-08-04,U.S. Cellular Field,24,1,Trayce Thompson
+31322,thomptr01,2016,LAN,236,13,7,1991,2015-08-04,Dodger Stadium,25,2,Trayce Thompson
+31347,thomptr01,2017,LAN,49,1,7,1991,2015-08-04,Dodger Stadium,26,3,Trayce Thompson
+2022,thomptr01,2018,CHA,128,3,8,1991,2015-08-04,Guaranteed Rate Field,27,4,Trayce Thompson
+39144,travisa01,2017,BOS,76,0,2,1993,2017-05-24,Fenway Park II,24,1,Sam Travis
+39164,travisa01,2018,BOS,36,1,6,1993,2017-05-24,Fenway Park II,25,2,Sam Travis
+39183,travisa01,2019,BOS,144,6,2,1993,2017-05-24,Fenway Park II,26,3,Sam Travis
+1850,troutmi01,2011,LAA,123,5,7,1991,2011-07-08,Angel Stadium,20,1,Mike Trout
+25624,troutmi01,2012,LAA,559,30,7,1991,2011-07-08,Angel Stadium of Anaheim,21,2,Mike Trout
+25649,troutmi01,2013,LAA,589,27,7,1991,2011-07-08,Angel Stadium of Anaheim,22,3,Mike Trout
+25670,troutmi01,2014,LAA,602,36,7,1991,2011-07-08,Angel Stadium of Anaheim,23,4,Mike Trout
+25691,troutmi01,2015,LAA,575,41,7,1991,2011-07-08,Angel Stadium of Anaheim,24,5,Mike Trout
+29779,troutmi01,2016,LAA,549,29,7,1991,2011-07-08,Angel Stadium of Anaheim,25,6,Mike Trout
+51723,troutmi01,2017,LAA,402,33,7,1991,2011-07-08,Angel Stadium of Anaheim,26,7,Mike Trout
+20554,troutmi01,2018,LAA,471,39,7,1991,2011-07-08,Angel Stadium of Anaheim,27,8,Mike Trout
+38635,troutmi01,2019,LAA,470,45,7,1991,2011-07-08,Angel Stadium of Anaheim,28,9,Mike Trout
+31352,verdual01,2017,LAN,23,1,7,1996,2017-09-01,Dodger Stadium,21,1,Alex Verdugo
+31370,verdual01,2018,LAN,77,1,8,1996,2017-09-01,Dodger Stadium,22,2,Alex Verdugo
+31389,verdual01,2019,LAN,343,12,7,1996,2017-09-01,Dodger Stadium,23,3,Alex Verdugo
+47076,yelicch01,2013,MIA,240,4,6,1991,2013-07-23,Marlins Park,22,1,Christian Yelich
+28495,yelicch01,2014,MIA,582,9,6,1991,2013-07-23,Marlins Park,23,2,Christian Yelich
+28516,yelicch01,2015,MIA,476,7,6,1991,2013-07-23,Marlins Park,24,3,Christian Yelich
+18227,yelicch01,2016,MIA,578,21,6,1991,2013-07-23,Marlins Park,25,4,Christian Yelich
+16818,yelicch01,2017,MIA,602,18,7,1991,2013-07-23,Marlins Park,26,5,Christian Yelich
+6388,yelicch01,2018,MIL,574,36,6,1991,2013-07-23,Miller Park,27,6,Christian Yelich
+6407,yelicch01,2019,MIL,489,44,8,1991,2013-07-23,Miller Park,28,7,Christian Yelich
