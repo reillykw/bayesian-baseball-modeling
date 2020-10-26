@@ -3,6 +3,13 @@ import scipy.stats as stats
 import datetime as dt
 import boto3
 import pickle
+import logging
+import multiprocessing as mp
+from multiprocessing import cpu_count
+from functools import partial
+
+log = logging.getLogger()
+log.setLevel(logging.DEBUG)
 
 
 def theta(alpha, beta, age_trajectory_val):
@@ -49,7 +56,7 @@ def log_elite_transitions(pos, prev, curr, nu_params):
     return np.log(nu_params[pos, int(prev), int(curr)])
 
 
-def log_posterior(alpha, beta, gamma, nu, omega, tau, data):
+def log_posterior(alpha, beta, gamma, nu, omega, tau, data, parks):
     """
     Args
     ----
@@ -73,41 +80,47 @@ def log_posterior(alpha, beta, gamma, nu, omega, tau, data):
         Log Likelihood of the posterior distribution
     """
 
+   
+    rows = list(data.iterrows())
+    _run = partial(run, alpha=alpha, beta=beta, gamma=gamma, nu=nu, omega=omega, tau=tau, parks=parks)
+    with mp.Pool(cpu_count()) as pool:
+        results = pool.map(_run, rows)
     post_sum = 0
-    parks = sorted(data['park'].unique())
-
-    for _, row in data.iterrows():
-        # 2nd equation on RHS equation (8) return the LOG of p(θ)
-        age = row.playerAge
-        pos = row.position_main
-        park = row.park
-        hrs = row.HR
-        ab = row.AB
-        es_prev = row.eliteStatusPrev
-        es_curr = row.eliteStatus
-
-        age_traj = age_trajectory(age, gamma[pos])
-
-        park_idx = parks.index(park)
-
-        rate = theta(alpha[pos, es_curr], beta[park_idx], age_traj)
-        log_theta = np.log(rate)
-
-        # capture rates > 1 and give them .99 for now
-        rate_trunc = rate if rate < 1 else 0.99
-
-        # 1st equation on RHS of equation(8)
-        post_sum += stats.binom(n=ab, p=rate_trunc).logpmf(k=hrs)
-        # 2nd equation on RHS of equation(8)
-        post_sum += log_theta
-        # 3rd equation on RHS of equation(8)
-        post_sum += log_elite_transitions(pos, es_prev, es_curr, nu)
-
+    post_sum = sum(results)
     # 4th equation on the RHS of equation(8)
     post_sum += log_prior(alpha, beta, gamma, nu, omega, tau)
 
     return post_sum
 
+def run(row, alpha, beta, gamma, nu, omega, tau, parks):
+    _, row = row
+    post_sum = 0
+    # 2nd equation on RHS equation (8) return the LOG of p(θ)
+    age = row.playerAge
+    pos = row.position_main
+    park = row.park
+    hrs = row.HR
+    ab = row.AB
+    es_prev = row.eliteStatusPrev
+    es_curr = row.eliteStatus
+
+    age_traj = age_trajectory(age, gamma[pos])
+
+    park_idx = parks.index(park)
+
+    rate = theta(alpha[pos, es_curr], beta[park_idx], age_traj)
+    log_theta = np.log(rate)
+
+    # capture rates > 1 and give them .99 for now
+    rate_trunc = rate if rate < 1 else 0.99
+
+    # 1st equation on RHS of equation(8)
+    post_sum += stats.binom(n=ab, p=rate_trunc).logpmf(k=hrs)
+    # 2nd equation on RHS of equation(8)
+    post_sum += log_theta
+    # 3rd equation on RHS of equation(8)
+    post_sum += log_elite_transitions(pos, es_prev, es_curr, nu)
+    return post_sum
 
 def transitions(players, curr_params):
     for index, player in players:
@@ -292,7 +305,8 @@ def gibbs_sampler(samples, data, params):
     alpha_accept = 0
     beta_accept = 0
     gamma_accept = 0
-
+    parks = sorted(data['park'].unique())
+    print(f"Gibbs sampler n = {samples}")
     for n in range(samples):
         # alpha update
         for i, alpha_ in enumerate(alpha):
@@ -302,8 +316,8 @@ def gibbs_sampler(samples, data, params):
             prop_a.sort()
             # insert new
             alpha_c[i, :] = prop_a
-            rho_a = log_posterior(alpha_c, beta, gamma, nu, omega, tau, data) - \
-                log_posterior(alpha, beta, gamma, nu, omega, tau, data)
+            rho_a = log_posterior(alpha_c, beta, gamma, nu, omega, tau, data, parks) - \
+                log_posterior(alpha, beta, gamma, nu, omega, tau, data, parks)
             if np.isnan(rho_a):
                 rho_a = 0
             rho_a = min(0, rho_a)
@@ -332,8 +346,8 @@ def gibbs_sampler(samples, data, params):
             beta_c = beta.copy()
             prop_b = beta_ + proposal_distribution.rvs()
             beta_c[i] = prop_b
-            rho_b = log_posterior(alpha, beta_c, gamma, nu, omega, tau, data) - \
-                log_posterior(alpha, beta, gamma, nu, omega, tau, data)
+            rho_b = log_posterior(alpha, beta_c, gamma, nu, omega, tau, data, parks) - \
+                log_posterior(alpha, beta, gamma, nu, omega, tau, data, parks)
             if np.isnan(rho_b):
                 rho_b = 0
             rho_b = min(0, rho_b)
@@ -362,8 +376,8 @@ def gibbs_sampler(samples, data, params):
             gamma_c = gamma.copy()
             prop_g = gamma_ + proposal_distribution.rvs(size=4)
             gamma_c[i, :] = prop_g
-            rho_g = log_posterior(alpha, beta, gamma_c, nu, omega, tau, data) - \
-                log_posterior(alpha, beta, gamma, nu, omega, tau, data)
+            rho_g = log_posterior(alpha, beta, gamma_c, nu, omega, tau, data, parks) - \
+                log_posterior(alpha, beta, gamma, nu, omega, tau, data, parks)
             if np.isnan(rho_g):
                 rho_g = 0
             rho_g = min(0, rho_g)
